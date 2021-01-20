@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class MainController {
+public class LatestController {
     @Value("${latest.app_id}")
     private String appId;
     @Value("${latest.base}")
@@ -19,7 +19,7 @@ public class MainController {
     private final LatestService latestService;
 
     @Autowired
-    public MainController(LatestService latestService) {
+    public LatestController(LatestService latestService) {
         this.latestService = latestService;
     }
 
